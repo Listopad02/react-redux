@@ -1,5 +1,5 @@
 const initialState = {
-    counter: 0
+    counter: 10
 }
 
 export default function rootReducer(state = initialState, action) {
