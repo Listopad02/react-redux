@@ -13,11 +13,20 @@ export function sub(number) {
     }
 } 
 
-export function addNumber() {
+export function addNumber(number) {
     return {
-        type: ADD_NUMBER
+        type: ADD_NUMBER,
+        payload: number
     }
 } 
+
+export function asyncAdd(number) {
+    return (dispatch) => {
+        setTimeout(() => {
+            dispatch(addNumber(number))
+        }, 3000)
+    }
+}
 
 export function add2(number) {
     return {
