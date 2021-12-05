@@ -28,7 +28,7 @@ const reducer = (state = initialState, action) => {
 const store = redux.createStore(reducer);
 store.subscribe(() => {
     console.log(store.getState());
-})
+});
 
 // Actions
 const addCounter = {
@@ -36,6 +36,6 @@ const addCounter = {
 }
 store.dispatch(addCounter);
 
-store.dispatch({ type: 'SUB' })
+store.dispatch({ type: 'SUB' });
 
-store.dispatch({ type: 'ADD_NUMBER', value: 10 })
+store.dispatch({ type: 'ADD_NUMBER', value: 10 });

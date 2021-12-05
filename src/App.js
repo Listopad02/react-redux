@@ -8,20 +8,18 @@ class App extends Component {
   render() {
     return (
       <div className={'App'}>
-        <h1>Счетчик <strong>{this.props.counter}</strong></h1>
-
+        <h1>Counter: <strong>{this.props.counter}</strong></h1>
         <hr/>
-
         <div className="Actions">
-          <button onClick={this.props.onAdd}>Добавить 1</button>
-          <button onClick={this.props.onSub}>Вычесть 1</button>
+          <button onClick={this.props.onAdd}>Add 1</button>
+          <button onClick={this.props.onSub}>Sub 1</button>
         </div>
         <div className="Actions">
-          <button onClick={() => this.props.onAddNumber(15)}>Добавить 15</button>
-          <button onClick={() => this.props.onAddNumber(-17)}>Вычесть 17</button>
+          <button onClick={() => this.props.onAddNumber(15)}>Add 15</button>
+          <button onClick={() => this.props.onAddNumber(-17)}>Sub 17</button>
         </div>
         <div className="Actions">
-          <button onClick={() => this.props.onAsyncAdd(100)}>Асинхронно добавить 100</button>
+          <button onClick={() => this.props.onAsyncAdd(100)}>Async add 100</button>
         </div>
 
         <Counter />
